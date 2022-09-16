@@ -8,7 +8,8 @@ namespace CSLabs
         private static double[] GetInput(int n)
         {
             // Я младший программист Никитка(Ковшик/Ножик/МолодойПлатон/КириллБледный <3/// Я младший программист Никитка(Ковшик/Ножик/МолодойПлатон/КириллБледный <3/
-
+            // Привет
+            
 
             var input_array = Console.ReadLine()!.Split(' ');
             var input_values = new double[n];
@@ -54,6 +55,7 @@ namespace CSLabs
             {
                 switch (n)
                 {
+                    case 6: return a * b; // Тест 
                     case 1: return a * b;
                     case 2: return a * h / 2;
                     case 3: return (a + b) * h / 2;
