@@ -155,7 +155,7 @@ namespace CSLabs
                 }
                 catch (System.Exception error)
                 {
-                    Console.WriteLine(error.Message + "; " + error.GetType());
+                    Console.WriteLine(error.Message + ";");
                     return new MotoBike();
                 }
             }
