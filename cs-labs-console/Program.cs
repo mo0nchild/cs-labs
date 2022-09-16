@@ -55,7 +55,6 @@ namespace CSLabs
             {
                 switch (n)
                 {
-                    case 6: return a * b; // Тест 
                     case 1: return a * b;
                     case 2: return a * h / 2;
                     case 3: return (a + b) * h / 2;
