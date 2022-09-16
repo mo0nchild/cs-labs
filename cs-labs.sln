@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-labs-console", "cs-labs-console\cs-labs-console.csproj", "{D4B695F2-5E92-401B-9D79-BB989B64C5BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-labs-winform", "cs-labs-winform\cs-labs-winform.csproj", "{9FE2ADFE-C101-4913-AECE-E10D648082C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D4B695F2-5E92-401B-9D79-BB989B64C5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B695F2-5E92-401B-9D79-BB989B64C5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B695F2-5E92-401B-9D79-BB989B64C5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE2ADFE-C101-4913-AECE-E10D648082C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE2ADFE-C101-4913-AECE-E10D648082C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE2ADFE-C101-4913-AECE-E10D648082C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE2ADFE-C101-4913-AECE-E10D648082C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
