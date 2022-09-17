@@ -12,10 +12,7 @@ namespace cs_labs_winform
 {
     public partial class LabTask1 : Form
     {
-        public LabTask1()
-        {
-            InitializeComponent();
-        }
+        public LabTask1() => InitializeComponent();
 
         private void back_button_Click(object sender, EventArgs e) => this.Close();
 
