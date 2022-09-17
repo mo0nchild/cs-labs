@@ -56,7 +56,7 @@ namespace CSLabs
             double CalculateTime(double h, double _v) => (Math.Sqrt(2 * 10.0 * h + Math.Pow(_v, 2)) - _v) / 10.0;
 
             // локальная функция (метод) для проверки условия способности решения квадратного уравления 
-            bool CalculateTruth(double a, double b, double c) => (Math.Pow(b, 2) - (4.0 * a * c) < 0);
+            bool CalculateTruth(double a, double b, double c) => (Math.Pow(b, 2) - (4.0 * a * c) >= 0);
 
             // локальная функция (метод) для расчета площади выбранной фигуры n
             double Figura(double a, double b, double h, int n, double R)

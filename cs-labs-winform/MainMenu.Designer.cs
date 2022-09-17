@@ -84,6 +84,7 @@
             // 
             // task_combobox
             // 
+            this.task_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.task_combobox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.task_combobox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.task_combobox.FormattingEnabled = true;
@@ -146,9 +147,10 @@
             this.Controls.Add(this.info_button);
             this.Controls.Add(this.main_label);
             this.Controls.Add(this.theme_label);
+            this.MaximumSize = new System.Drawing.Size(468, 269);
+            this.MinimumSize = new System.Drawing.Size(468, 269);
             this.Name = "MainMenu";
             this.Text = "Главное меню";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
