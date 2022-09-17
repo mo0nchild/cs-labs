@@ -90,7 +90,7 @@ namespace CSharpLabs
             // статическое поле используемое для определения серийного номера мотоцикла
             private static int CurrentServiceNumber = 0;
 
-            public double Speed { get; set; } = 0; // текущая скорость мотоцикла
+            public double Speed { get; private set; } = 0; // текущая скорость мотоцикла
             public int ServiceNumber { get; private set; } // серийный номер
             public MotoType Type { get; private set; } // тип транспорта
             public double MaxSpeed { get; set; } // максимальная заявленная скорость

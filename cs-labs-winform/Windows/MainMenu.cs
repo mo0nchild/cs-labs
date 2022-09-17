@@ -1,4 +1,4 @@
-namespace cs_labs_winform
+namespace CSharpLabs.Windows
 {
     public partial class MainMenu : Form
     {
@@ -10,19 +10,18 @@ namespace cs_labs_winform
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            switch (this.task_combobox.SelectedIndex) 
+            switch (this.task_combobox.SelectedIndex)
             {
                 case 0: new LabTask1().ShowDialog(); break;
-                case 1: new Form3().ShowDialog(); break;
-                    // запуск 2 задания
+                case 1: new LabTask2().ShowDialog(); break;
                 default: break;
             }
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
         {
-            string taskinfo_message = (this.task_combobox.SelectedIndex == 0) ? "1) Вычислить выражение\n" +
-                "2) Вычислить время падения тела.\n3) Имеет ли квадратное уравнение решение.\n4) Dычисление " +
+            string taskinfo_message = this.task_combobox.SelectedIndex == 0 ? "1) Вычислить выражение\n" +
+                "2) Вычислить время падения тела.\n3) Имеет ли квадратное уравнение решение.\n4) Вычисление " +
                 "площадей фигур" : "Создать структуру по предметной области и метод отображения данных";
 
             MessageBox.Show(taskinfo_message, "Информация задания");
