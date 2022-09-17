@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,10 +36,7 @@ namespace cs_labs_winform
         {
             var Changespeed = new ChangeSpeed(moto_bike);
             Changespeed.ShowDialog();
-
-
-
-            
+            moto_bike.Speed = ChangeSpeed.UPSpeed;
         }
 
         private void back_to_titile_Click(object sender, EventArgs e)
