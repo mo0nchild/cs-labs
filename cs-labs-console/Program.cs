@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CSLabs
+namespace CSharpLabs
 {
     public class Program
     {
@@ -41,7 +41,7 @@ namespace CSLabs
             // подзадание 4: Составить программу вычисления площадей различных геометрических фигур
             Console.Write("\n4) Введите строку значений (a b h R): ");
             double[] inpute_4 = GetInput(4);
-            for (int i = 0; i < 6; i++) Console.WriteLine($"S = {Figura(inpute_4[0], inpute_4[1], inpute_4[2], i, inpute_4[3])}, n = {i}");
+            for (int i = 0; i < 6; i++) Console.WriteLine($"S = {CalculateArea(inpute_4[0], inpute_4[1], inpute_4[2], i, inpute_4[3])}, n = {i}");
 
             // локальная функция (метод) для расчета значений А и Б
             void CalculateAB(double x, double y, double z)
@@ -59,7 +59,7 @@ namespace CSLabs
             bool CalculateTruth(double a, double b, double c) => (Math.Pow(b, 2) - (4.0 * a * c) >= 0);
 
             // локальная функция (метод) для расчета площади выбранной фигуры n
-            double Figura(double a, double b, double h, int n, double R)
+            double CalculateArea(double a, double b, double h, int n, double R)
             {
                 switch (n)
                 {

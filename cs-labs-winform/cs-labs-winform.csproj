@@ -3,14 +3,14 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>cs_labs_winform</RootNamespace>
+    <RootNamespace>CSharpLabs</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="assets\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
 
   <ItemGroup>
