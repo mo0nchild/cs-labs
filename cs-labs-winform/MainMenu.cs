@@ -4,12 +4,8 @@ namespace cs_labs_winform
     {
         public MainMenu()
         {
-            InitializeComponent();
-        }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-            this.task_combobox.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.InitializeComponent();
+            this.task_combobox.SelectedIndex = default(int);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -25,19 +21,11 @@ namespace cs_labs_winform
 
         private void HelpButton_Click(object sender, EventArgs e)
         {
-            switch (this.task_combobox.SelectedIndex)
-            {
-                case 0:
-                    MessageBox.Show("1) Даны x, y, z. Вычислить a, b\n2) Вычислить время падения тела с высоты H с начальной скоростью V.\n" +
-                        "3) Определить, имеет ли квадратное уравнение с коэффициентами a, b и c решение.\n" +
-                        "4) Составить программу вычисления площадей различных геометрических фигур", "Информация задания");
-                    break;
-                case 1:
-                    MessageBox.Show("1) Создать структуру согласно предметной области варианта\n" +
-                        "2) Добавить метод отображения данных структуры.", "Информация задания");
-                    break;
-                default: break;
-            }
+            string taskinfo_message = (this.task_combobox.SelectedIndex == 0) ? "1) Вычислить выражение\n" +
+                "2) Вычислить время падения тела.\n3) Имеет ли квадратное уравнение решение.\n4) Dычисление " +
+                "площадей фигур" : "Создать структуру по предметной области и метод отображения данных";
+
+            MessageBox.Show(taskinfo_message, "Информация задания");
         }
 
         private void InfoButton_Click(object sender, EventArgs e)
