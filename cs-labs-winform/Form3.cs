@@ -15,11 +15,12 @@ namespace cs_labs_winform
         public Form3()
         {
             InitializeComponent();
+            Create_MotoBike_Standart();
         }
 
         private void condition_Click(object sender, EventArgs e)
         {
-            var ConditionForm = new Condition_Form();
+            var ConditionForm = new Condition_Form(moto_bike);
             ConditionForm.ShowDialog();
         }
 
@@ -27,17 +28,29 @@ namespace cs_labs_winform
         {
             var CreateForm = new Create_Form();
             CreateForm.ShowDialog();
+            moto_bike = CreateForm.newMotoBike;
         }
 
         private void speed_Click(object sender, EventArgs e)
         {
-            var Changespeed = new ChangeSpeed();
+            var Changespeed = new ChangeSpeed(moto_bike);
             Changespeed.ShowDialog();
+
+
+
+            
         }
 
         private void back_to_titile_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
+        
+        private void Create_MotoBike_Standart()
+        {
+            moto_bike = new MotoBike();
+        }
+
+        private MotoBike moto_bike;
     }
 }

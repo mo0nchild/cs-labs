@@ -17,9 +17,8 @@ namespace cs_labs_winform
             switch (this.task_combobox.SelectedIndex) 
             {
                 case 0: new LabTask1().ShowDialog(); break;
-                case 1:
+                case 1: new Form3().ShowDialog(); break;
                     // запуск 2 задания
-                    break;
                 default: break;
             }
         }

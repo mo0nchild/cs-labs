@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 namespace cs_labs_winform
 {
     // перечисление используемое для определения типа мотоцикла (скутер, классический, спортивный, туристический)
-    internal class Logic
-    {
-        private enum MotoType { Scooter = 1, Classic, Sports, Tourer }
-        private struct MotoBike
+    public enum MotoType { Scooter = 1, Classic, Sports, Tourer }
+    public struct MotoBike
         {
             // неизменяемое поле, которое определяет стандартное значение скорости мотоцикла
             private const double StandantSpeed = 101.0;
@@ -52,4 +50,3 @@ namespace cs_labs_winform
             public override string ToString() => this.GetState();
         }
     }
-}

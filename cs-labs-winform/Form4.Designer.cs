@@ -135,7 +135,9 @@
             this.Controls.Add(this.model_v);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(281, 310);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(281, 310);
             this.Name = "Condition_Form";
             this.Text = "Состояние";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
