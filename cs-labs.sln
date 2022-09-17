@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-labs-console", "cs-labs-console\cs-labs-console.csproj", "{D4B695F2-5E92-401B-9D79-BB989B64C5BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs-labs-console", "cs-labs-console\cs-labs-console.csproj", "{D4B695F2-5E92-401B-9D79-BB989B64C5BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs-labs-winform", "cs-labs-winform\cs-labs-winform.csproj", "{9FE2ADFE-C101-4913-AECE-E10D648082C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs-labs-winform", "cs-labs-winform\cs-labs-winform.csproj", "{9FE2ADFE-C101-4913-AECE-E10D648082C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
