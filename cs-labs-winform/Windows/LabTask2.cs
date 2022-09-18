@@ -37,9 +37,7 @@ namespace CSharpLabs.Windows
         private void CreateMotoBikeButtonClick(object? sender, EventArgs e)
         {
             var create_form = new Create_Form();
-            create_form.ShowDialog();
-
-            this.moto_bike = create_form.NewMotoBike;
+            if(create_form.ShowDialog() != DialogResult.Cancel) this.moto_bike = create_form.NewMotoBike;
         }
 
         private void SpeedUpButtonClick(object? sender, EventArgs e)

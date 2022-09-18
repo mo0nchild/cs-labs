@@ -36,6 +36,8 @@ namespace CSharpLabs.Windows
 
             var moto_type = (MotoType)Enum.Parse(typeof(MotoType), temp);
             this.NewMotoBike = new MotoBike((double)max_speed_value.Value, moto_type);
+
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }
