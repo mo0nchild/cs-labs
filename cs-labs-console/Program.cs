@@ -11,7 +11,7 @@ namespace CSharpLabs
     {
         public static void Main(string[] args)
         {
-            var labs_types = LabsLoaderSupport.GetLabsTypes();
+            var labs_types = LoaderSupport.GetLabsTypes();
             while (true) 
             {
                 Console.WriteLine("Список доступных лабораторных работ: ");

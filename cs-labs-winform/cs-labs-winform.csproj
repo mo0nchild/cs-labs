@@ -10,7 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Folder Include="Labs\Lab2\Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cs-labs-console\cs-labs-console.csproj" />
   </ItemGroup>
 
   <ItemGroup>
