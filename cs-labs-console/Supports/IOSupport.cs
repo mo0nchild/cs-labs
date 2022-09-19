@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpLabs.Support
+namespace CSharpLabs.Supports
 {
-    internal static class IOSupport
+    public static class IOSupport
     {
         // функция для последовательного ввода и чтения значений через символ пробела
         public static double[] GetInput(int n)

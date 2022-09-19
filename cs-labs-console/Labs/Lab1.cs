@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CSharpLabs.Support;
+using CSharpLabs.Supports;
 
 namespace CSharpLabs.Labs
 {
     internal class Lab1 : ILabRunner
     {
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
-
-
         private static void Task1()
         {
             // подзадание 1: даны x, y, z, вычислить a, b, по формуле
