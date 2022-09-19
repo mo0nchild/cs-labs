@@ -23,6 +23,7 @@ namespace CSharpLabs
                     int lab_select = int.Parse(Console.ReadLine()!);
                     object? lab_instance = Activator.CreateInstance(labs_types[lab_select - 1]);
 
+                    Console.Clear();
                     labs_types[lab_select - 1].GetMethod("Run")?.Invoke(lab_instance, new object[] { });
                 }
                 catch (Exception error) { Console.WriteLine(error.Message); }
