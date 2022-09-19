@@ -17,10 +17,10 @@ namespace CSharpLabs.Labs
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
         private static void Task1()
         {
-            int ask = default(int) - 1;
+            int ask = default(int);
             
 
-            while (ask != 0)
+            while (true)
             {
                 Console.Clear();
                 Console.WriteLine("Введите номер задания\n2) Задание 2\n3) Задание 3\n4) Задание 4\n5) Выход");
@@ -40,9 +40,9 @@ namespace CSharpLabs.Labs
 
                         break;
                     case 5:
-
-                        break;
-                    default: continue;
+                        return;
+                    default: 
+                        continue;
                 }
             }
 
@@ -53,6 +53,7 @@ namespace CSharpLabs.Labs
         // Среди заданных чисел найти количество трехзначных чисел.
         private static void Task2()
         {
+            Console.Clear();
             Console.WriteLine("Введите количество чисел:");
 
             int amount = int.Parse(Console.ReadLine()!);
@@ -72,18 +73,22 @@ namespace CSharpLabs.Labs
 
             if (count == 0) Console.WriteLine("Среди заданных чисел нет трёхзначных");   
             else Console.WriteLine($"Количество чисел удовлетворяющих условие: {count}");
+
+            Console.ReadKey();
         }
         private static void Task3()
         {
+            Console.Clear();
             var output = new List<int>();
 
             for (int i = 1000; i < 9999; i++)
             {
                 if (i % 133 == 125 && i % 134 == 111)
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine($"Искомые данные: {i}");
                 }
             }
+            Console.ReadKey();
         }
     }
 }
