@@ -11,20 +11,21 @@ namespace CSharpLabs
     {
         public static void Main(string[] args)
         {
-            var labs_types = LoaderSupport.GetLabsTypes();
+            var labs_types = new LoaderSupport(Assembly.GetExecutingAssembly());
             while (true) 
             {
                 Console.WriteLine("Список доступных лабораторных работ: ");
-                for (int i = 0; i < labs_types.Count; i++) Console.WriteLine($"\t- [{i+1}] {labs_types[i]}");
-                Console.Write("Выберите номер лабораторной работы: ");
+                for (int i = 0; i < labs_types.TypesListCount; i++) 
+                {
+                    Console.WriteLine($"\t- [{i + 1}] {labs_types[i].Type.Name}: {labs_types[i].Name}");
+                }
 
+                Console.Write("Выберите номер лабораторной работы: ");
                 try 
                 {
                     int lab_select = int.Parse(Console.ReadLine()!);
-                    object? lab_instance = Activator.CreateInstance(labs_types[lab_select - 1]);
-
                     Console.Clear();
-                    labs_types[lab_select - 1].GetMethod("Run")?.Invoke(lab_instance, new object[] { });
+                    labs_types.InvokeTask(lab_select - 1);
                 }
                 catch (Exception error) { Console.WriteLine(error.Message); }
 

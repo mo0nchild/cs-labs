@@ -10,6 +10,7 @@ namespace CSharpLabs.Labs
 {
     internal class Lab1 : ILabRunner
     {
+        public string LabName => "ConsoleLab1";
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
         private static void Task1()
         {
@@ -180,7 +181,7 @@ namespace CSharpLabs.Labs
             }
         }
 
-        public void Run()
+        public void RunLab()
         {
             while (true)
             {

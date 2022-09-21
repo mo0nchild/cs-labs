@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Folder Include="Labs\Lab2\Assets\" />
+    <Folder Include="Labs\Lab3\" />
   </ItemGroup>
 
   <ItemGroup>

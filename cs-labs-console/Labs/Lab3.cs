@@ -10,16 +10,12 @@ namespace CSharpLabs.Labs
 {
     internal class Lab3 : ILabRunner
     {
-        public void Run()
-        {
-            Task1();
-        }
+        public string LabName => "ConsoleLab3";
+        public void RunLab() => Task1();
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
         private static void Task1()
         {
             int ask = default(int);
-            
-
             while (true)
             {
                 Console.Clear();
@@ -30,20 +26,13 @@ namespace CSharpLabs.Labs
 
                 switch (ask)
                 {
-                    case 2:
-                        Task2();
-                        break;
-                    case 3:
-                        Task3();
-                        break;
-                    case 4:
-
-                        break;
-                    case 5:
-                        return;
-                    default: 
-                        continue;
+                    case 2: Task2(); break;
+                    case 3: Task3(); break;
+                    case 4: Task4(); break;
+                    default: return;
                 }
+                Console.WriteLine("Нажмите для продолжения");
+                Console.ReadKey();
             }
         }
 
@@ -71,8 +60,6 @@ namespace CSharpLabs.Labs
 
             if (count == 0) Console.WriteLine("Среди заданных чисел нет трёхзначных");   
             else Console.WriteLine($"Количество чисел удовлетворяющих условие: {count}");
-
-            Console.ReadKey();
         }
         private static void Task3()
         {
@@ -86,7 +73,27 @@ namespace CSharpLabs.Labs
                     Console.WriteLine($"Искомые данные: {i}");
                 }
             }
-            Console.ReadKey();
+        }
+
+        private static void Task4()
+        {
+            Console.WriteLine("Введите последовательность чисел:");
+            string[]? input_strings = Console.ReadLine()?.Split(" 0")[0].Split(' ');
+            if (input_strings is null) return;
+
+            int[] input_values = new int[input_strings.Length];
+            for (int i = 0; i < input_strings.Length; i++)
+            {
+                try { input_values[i] = int.Parse(input_strings[i]); }
+                catch (FormatException error) { Console.WriteLine($"[{input_strings[i]}] - " + error.Message); continue; }
+            }
+
+            var max_value = int.MinValue;
+            foreach (var i in input_values)
+            {
+                if (i > max_value) max_value = i;
+            }
+            Console.WriteLine("Максимальное значение: {0}", max_value);
         }
     }
 }
