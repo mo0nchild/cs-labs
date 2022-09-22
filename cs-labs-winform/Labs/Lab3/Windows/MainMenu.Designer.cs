@@ -1,4 +1,4 @@
-﻿namespace CSharpLabs.Lab2.Windows
+﻿namespace CSharpLabs.Lab3.Windows
 {
     partial class MainMenu
     {
@@ -46,7 +46,7 @@
             this.main_label.Name = "main_label";
             this.main_label.Size = new System.Drawing.Size(241, 25);
             this.main_label.TabIndex = 1;
-            this.main_label.Text = "Лабораторная работа №2";
+            this.main_label.Text = "Лабораторная работа №3";
             this.main_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // info_button
@@ -58,7 +58,6 @@
             this.info_button.TabIndex = 2;
             this.info_button.Text = "Информация лабораторной работы ";
             this.info_button.UseVisualStyleBackColor = true;
-            this.info_button.Click += new System.EventHandler(this.InfoButton_Click);
             // 
             // help_button
             // 
@@ -69,7 +68,6 @@
             this.help_button.TabIndex = 3;
             this.help_button.Text = "Описание";
             this.help_button.UseVisualStyleBackColor = true;
-            this.help_button.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // start_button
             // 
@@ -80,7 +78,6 @@
             this.start_button.TabIndex = 4;
             this.start_button.Text = "Запуск задания";
             this.start_button.UseVisualStyleBackColor = true;
-            this.start_button.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // task_combobox
             // 
@@ -103,12 +100,12 @@
             this.theme_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.theme_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.theme_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.theme_label.Location = new System.Drawing.Point(12, 43);
+            this.theme_label.Location = new System.Drawing.Point(16, 43);
             this.theme_label.Name = "theme_label";
-            this.theme_label.Size = new System.Drawing.Size(431, 59);
+            this.theme_label.Size = new System.Drawing.Size(424, 59);
             this.theme_label.TabIndex = 0;
-            this.theme_label.Text = "«Разработка визуальных пользовательских интерфейсов для \r\nпрограммирования ввода-" +
-    "вывода и основных операторов языка \r\nC# на платформе .NET Framework»";
+            this.theme_label.Text = "«Разработка пользовательских интерфейсов для \r\nпрограммирования конструкций базов" +
+    "ых циклов на платформе \r\n.NET Framework»";
             this.theme_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // task_label
@@ -132,7 +129,6 @@
             this.exit_button.TabIndex = 7;
             this.exit_button.Text = "Выход";
             this.exit_button.UseVisualStyleBackColor = true;
-            this.exit_button.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // MainMenu
             // 

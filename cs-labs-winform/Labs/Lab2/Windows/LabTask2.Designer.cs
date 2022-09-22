@@ -1,4 +1,4 @@
-﻿namespace CSharpLabs.Windows
+﻿namespace CSharpLabs.Lab2.Windows
 {
     partial class LabTask2
     {

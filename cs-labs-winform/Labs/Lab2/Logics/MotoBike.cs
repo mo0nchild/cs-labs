@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpLabs.Logics
+namespace CSharpLabs.Lab2.Logics
 {
     // перечисление используемое для определения типа мотоцикла (скутер, классический, спортивный, туристический)
     public enum MotoType { Scooter = 1, Classic, Sports, Tourer }

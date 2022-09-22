@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CSharpLabs.Logics;
+using CSharpLabs.Lab2.Logics;
 
-namespace CSharpLabs.Windows
+namespace CSharpLabs.Lab2.Windows
 {
     public partial class LabTask2 : Form
     {

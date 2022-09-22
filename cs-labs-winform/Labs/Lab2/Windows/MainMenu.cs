@@ -1,6 +1,6 @@
 using CSharpLabs.Supports;
 
-namespace CSharpLabs.Windows
+namespace CSharpLabs.Lab2.Windows
 {
     public partial class MainMenu : Form, ILabRunner
     {

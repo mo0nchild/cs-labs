@@ -21,7 +21,7 @@ namespace CSharpLabs.Supports
         private List<System.Type> TypesList { get; set; } = new();
         public int TypesListCount { get => this.TypesList.Count; }
 
-        public (System.Type Type, string Name) this[int index] 
+        public (System.Type Type, string Name) this[int index]
         {
             get => (this.TypesList[index], ((ILabRunner)Activator.CreateInstance(this.TypesList[index])!).LabName);
         }
