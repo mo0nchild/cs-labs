@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CSharpLabs.Lab3.Windows
 {
-    public partial class LabTask1 : Form
+    public partial class LabTask6 : Form
     {
-        public LabTask1()
+        public LabTask6()
         {
             this.InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace CSharpLabs.Lab3.Windows
 {
-    partial class LabTask1
+    partial class LabTask6
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // LabTask6
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "LabTask1";
+            this.ClientSize = new System.Drawing.Size(418, 335);
+            this.MaximumSize = new System.Drawing.Size(434, 374);
+            this.MinimumSize = new System.Drawing.Size(434, 374);
+            this.Name = "LabTask6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Задание 6";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -24,7 +24,7 @@ namespace CSharpLabs.Lab3.Windows
         {
             switch (this.task_combobox.SelectedIndex)
             {
-                case 0: new LabTask1().ShowDialog(); break;
+                case 0: new LabTask4().ShowDialog(); break;
                 default: break;
             }
         }
