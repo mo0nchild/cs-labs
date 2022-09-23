@@ -14,12 +14,18 @@ namespace CSharpLabs.Lab3.Windows
 {
     public partial class LabTask8 : Form
     {
-        public LabTask8() => this.InitializeComponent();
+        public LabTask8()
+        {
+            this.InitializeComponent();
+            this.exit_button.Click += new EventHandler(ExitButton_Click);
+        }
 
         private void Calculate_Click(object sender, EventArgs e)
         {
             var Task = new Task8Logic();
             result_textbox.Text = (Task.Calculate_with_Fact(Convert.ToInt32(value_numeric.Value))).ToString();
         }
+
+        private void ExitButton_Click(object? sender, EventArgs e) => this.Close();
     }
 }

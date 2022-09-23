@@ -34,6 +34,7 @@
             this.result_textbox = new System.Windows.Forms.TextBox();
             this.result_label = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
+            this.oprimazed_checkbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // task1_title_label
@@ -97,11 +98,24 @@
             this.exit_button.Text = "Выйти в главное меню";
             this.exit_button.UseVisualStyleBackColor = true;
             // 
+            // oprimazed_checkbox
+            // 
+            this.oprimazed_checkbox.AutoSize = true;
+            this.oprimazed_checkbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.oprimazed_checkbox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oprimazed_checkbox.Location = new System.Drawing.Point(16, 128);
+            this.oprimazed_checkbox.Name = "oprimazed_checkbox";
+            this.oprimazed_checkbox.Size = new System.Drawing.Size(133, 23);
+            this.oprimazed_checkbox.TabIndex = 15;
+            this.oprimazed_checkbox.Text = "Оптимизировать";
+            this.oprimazed_checkbox.UseVisualStyleBackColor = true;
+            // 
             // LabTask7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 335);
+            this.Controls.Add(this.oprimazed_checkbox);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.result_textbox);
             this.Controls.Add(this.result_label);
@@ -126,5 +140,6 @@
         private TextBox result_textbox;
         private Label result_label;
         private Button exit_button;
+        private CheckBox oprimazed_checkbox;
     }
 }

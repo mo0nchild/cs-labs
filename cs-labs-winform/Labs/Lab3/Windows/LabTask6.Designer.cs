@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.task1_title_label = new System.Windows.Forms.Label();
+            this.title_label = new System.Windows.Forms.Label();
             this.result_listview = new System.Windows.Forms.ListView();
             this.x_columnheader = new System.Windows.Forms.ColumnHeader();
             this.func_columnheader = new System.Windows.Forms.ColumnHeader();
@@ -45,16 +45,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.rightside_numeric)).BeginInit();
             this.SuspendLayout();
             // 
-            // task1_title_label
+            // title_label
             // 
-            this.task1_title_label.AutoSize = true;
-            this.task1_title_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.task1_title_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.task1_title_label.Location = new System.Drawing.Point(6, 7);
-            this.task1_title_label.Name = "task1_title_label";
-            this.task1_title_label.Size = new System.Drawing.Size(407, 40);
-            this.task1_title_label.TabIndex = 3;
-            this.task1_title_label.Text = "Задание №6: Вычисление значений функции в каждой точке \r\nотрезка и найти сумму по" +
+            this.title_label.AutoSize = true;
+            this.title_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.title_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.title_label.Location = new System.Drawing.Point(6, 7);
+            this.title_label.Name = "title_label";
+            this.title_label.Size = new System.Drawing.Size(407, 40);
+            this.title_label.TabIndex = 3;
+            this.title_label.Text = "Задание №6: Вычисление значений функции в каждой точке \r\nотрезка и найти сумму по" +
     "лученных значений.\r\n";
             // 
             // result_listview
@@ -196,7 +196,7 @@
             this.Controls.Add(this.rightside_numeric);
             this.Controls.Add(this.leftside_numeric);
             this.Controls.Add(this.result_listview);
-            this.Controls.Add(this.task1_title_label);
+            this.Controls.Add(this.title_label);
             this.MaximumSize = new System.Drawing.Size(434, 374);
             this.MinimumSize = new System.Drawing.Size(434, 374);
             this.Name = "LabTask6";
@@ -211,7 +211,7 @@
 
         #endregion
 
-        private Label task1_title_label;
+        private Label title_label;
         private ListView result_listview;
         private NumericUpDown leftside_numeric;
         private NumericUpDown rightside_numeric;
