@@ -31,22 +31,23 @@ namespace CSharpLabs.Lab2.Windows
             this.max_speed_value.Text = condition_motobike.MaxSpeed.ToString();
             this.speed_value.Text =  condition_motobike.Speed.ToString();
 
+            string assetsfolder_path = @".\..\..\..\Labs\Lab2\Assets";
             switch (this.condition_motobike.Type)
             {
                 case MotoType.Classic:
-                    this.pictureBox1.Image = Image.FromFile("..//..//..//assets/classic.jpg");
+                    this.pictureBox1.Image = Image.FromFile(assetsfolder_path + "\\classic.jpg");
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     break;
                 case MotoType.Scooter:
-                    this.pictureBox1.Image = Image.FromFile("..//..//..//assets/scooter.jpg");
+                    this.pictureBox1.Image = Image.FromFile(assetsfolder_path + "\\scooter.jpg");
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     break;
                 case MotoType.Sports:
-                    this.pictureBox1.Image = Image.FromFile("..//..//..//assets/sports.jpg");
+                    this.pictureBox1.Image = Image.FromFile(assetsfolder_path + "\\sports.jpg");
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     break;
                 case MotoType.Tourer:
-                    this.pictureBox1.Image = Image.FromFile("..//..//..//assets/adventure.jpg");
+                    this.pictureBox1.Image = Image.FromFile(assetsfolder_path + "\\adventure.jpg");
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     break;
                 default: 
