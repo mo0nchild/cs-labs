@@ -4,7 +4,7 @@ namespace CSharpLabs.TaskLoader
 {
     public partial class TaskLoader : Form
     {
-        private LoaderLogic task_loader = new(Assembly.GetExecutingAssembly());
+        private TaskLoaderLogic task_loader = new(Assembly.GetExecutingAssembly());
 
         public TaskLoader()
         {

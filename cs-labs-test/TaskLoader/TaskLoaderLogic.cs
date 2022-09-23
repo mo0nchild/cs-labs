@@ -29,9 +29,9 @@ namespace CSharpLabs.TaskLoader
         public void RunTask(); 
     }
 
-    public class LoaderLogic : object, IEnumerable<(string Name, Dictionary<string, ILabRunner> Tasks)>
+    public class TaskLoaderLogic : object, IEnumerable<(string Name, Dictionary<string, ILabRunner> Tasks)>
     {
-        private Dictionary<string, List<Type>> LabsList { get; set; } = new();
+        private SortedDictionary<string, List<Type>> LabsList { get; set; } = new();
         public System.UInt32 TasksCount
         {
             get 
@@ -43,7 +43,7 @@ namespace CSharpLabs.TaskLoader
             }
         }
 
-        public LoaderLogic(Assembly assembly)
+        public TaskLoaderLogic(System.Reflection.Assembly assembly)
         {
             foreach (System.Type task_type in assembly.GetTypes()) 
             {
@@ -59,6 +59,7 @@ namespace CSharpLabs.TaskLoader
                 }
             }
         }
+        public TaskLoaderLogic() : this(Assembly.GetExecutingAssembly()) { }
 
         public string GetTaskInfo(string labname, string taskname) 
         {

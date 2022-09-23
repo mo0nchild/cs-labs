@@ -28,7 +28,10 @@ namespace CSharpLabs.Loader
 
         private void LoadButtonClick(object? sender, EventArgs e)
         {
-            this.labs_loader.InvokeTask(this.labs_listview.SelectedItems[0].Index);
+            if (this.labs_listview.SelectedItems.Count > 0) 
+            {
+                this.labs_loader.InvokeTask(this.labs_listview.SelectedItems[0].Index);
+            }
         }
 
         private void RefreshButtonClick(object? sender, EventArgs e) 

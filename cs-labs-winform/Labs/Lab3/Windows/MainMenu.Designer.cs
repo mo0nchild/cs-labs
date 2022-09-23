@@ -146,6 +146,7 @@
             this.MaximumSize = new System.Drawing.Size(468, 269);
             this.MinimumSize = new System.Drawing.Size(468, 269);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Главное меню";
             this.ResumeLayout(false);
             this.PerformLayout();
