@@ -10,6 +10,18 @@ using System.Threading.Tasks;
 
 namespace CSharpLabs.Supports
 {
+    public class LabComparer : IComparer<System.Type>
+    {
+        public int Compare(Type? x, Type? y)
+        {
+            if (x is null || y is null) throw new Exception("Недопустимое значение аргументов");
+            var x_instance = ((ILabRunner)Activator.CreateInstance(x)!);
+            var y_instance = ((ILabRunner)Activator.CreateInstance(y)!);
+
+            return string.Compare(x_instance.LabName, y_instance.LabName);
+        }
+    }
+
     public interface ILabRunner 
     { 
         public string LabName { get; }
@@ -18,12 +30,13 @@ namespace CSharpLabs.Supports
 
     public class LoaderSupport : System.Object, IEnumerable<(System.Type Type, string Name)>
     {
-        private List<System.Type> TypesList { get; set; } = new();
+        private SortedSet<System.Type> TypesList { get; set; } = new(new LabComparer());
         public int TypesListCount { get => this.TypesList.Count; }
 
-        public (System.Type Type, string Name) this[int index]
+        public (System.Type Type, string Name) this[int key]
         {
-            get => (this.TypesList[index], ((ILabRunner)Activator.CreateInstance(this.TypesList[index])!).LabName);
+            get => (this.TypesList.ElementAt(key), 
+                (Activator.CreateInstance(this.TypesList.ElementAt(key)) as ILabRunner)!.LabName);
         }
 
         public LoaderSupport() : this(Assembly.GetExecutingAssembly()) { }
@@ -37,7 +50,7 @@ namespace CSharpLabs.Supports
 
         public void InvokeTask(int task_index = 0) 
         {
-            System.Type labtype = this.TypesList[task_index];
+            System.Type labtype = this.TypesList.ElementAt(task_index);
             try 
             {
                 object? lab_instance = Activator.CreateInstance(labtype);
@@ -54,6 +67,6 @@ namespace CSharpLabs.Supports
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => (IEnumerator)this.GetEnumerator();
     }
 }

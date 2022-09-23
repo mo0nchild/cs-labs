@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.task1_title_label = new System.Windows.Forms.Label();
-            this.Calculate = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.N_value = new System.Windows.Forms.Label();
-            this.Result_value = new System.Windows.Forms.Label();
-            this.Result_v = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.calc_button = new System.Windows.Forms.Button();
+            this.value_numeric = new System.Windows.Forms.NumericUpDown();
+            this.value_label = new System.Windows.Forms.Label();
+            this.result_label = new System.Windows.Forms.Label();
+            this.result_textbox = new System.Windows.Forms.TextBox();
+            this.exit_button = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.value_numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // task1_title_label
@@ -49,71 +50,89 @@
             this.task1_title_label.Text = "Задание №8: Дано целое число N>0. Используя один цикл,\r\nнайти сумму 1! +2! + 3! +" +
     "...+N!\r\n";
             // 
-            // Calculate
+            // calc_button
             // 
-            this.Calculate.Location = new System.Drawing.Point(13, 180);
-            this.Calculate.Name = "Calculate";
-            this.Calculate.Size = new System.Drawing.Size(75, 23);
-            this.Calculate.TabIndex = 6;
-            this.Calculate.Text = "Посчитать";
-            this.Calculate.UseVisualStyleBackColor = true;
-            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
+            this.calc_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.calc_button.Location = new System.Drawing.Point(13, 126);
+            this.calc_button.Name = "calc_button";
+            this.calc_button.Size = new System.Drawing.Size(393, 32);
+            this.calc_button.TabIndex = 6;
+            this.calc_button.Text = "Посчитать";
+            this.calc_button.UseVisualStyleBackColor = true;
+            this.calc_button.Click += new System.EventHandler(this.Calculate_Click);
             // 
-            // numericUpDown1
+            // value_numeric
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(93, 73);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.value_numeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.value_numeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.value_numeric.Location = new System.Drawing.Point(13, 82);
+            this.value_numeric.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDown1.TabIndex = 7;
+            this.value_numeric.Name = "value_numeric";
+            this.value_numeric.Size = new System.Drawing.Size(183, 29);
+            this.value_numeric.TabIndex = 7;
             // 
-            // N_value
+            // value_label
             // 
-            this.N_value.AutoSize = true;
-            this.N_value.Location = new System.Drawing.Point(12, 75);
-            this.N_value.Name = "N_value";
-            this.N_value.Size = new System.Drawing.Size(57, 15);
-            this.N_value.TabIndex = 8;
-            this.N_value.Text = "Число N:";
+            this.value_label.AutoSize = true;
+            this.value_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.value_label.Location = new System.Drawing.Point(13, 60);
+            this.value_label.Name = "value_label";
+            this.value_label.Size = new System.Drawing.Size(64, 19);
+            this.value_label.TabIndex = 8;
+            this.value_label.Text = "Число N:";
             // 
-            // Result_value
+            // result_label
             // 
-            this.Result_value.AutoSize = true;
-            this.Result_value.Location = new System.Drawing.Point(12, 127);
-            this.Result_value.Name = "Result_value";
-            this.Result_value.Size = new System.Drawing.Size(63, 15);
-            this.Result_value.TabIndex = 9;
-            this.Result_value.Text = "Результат:";
+            this.result_label.AutoSize = true;
+            this.result_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.result_label.Location = new System.Drawing.Point(212, 60);
+            this.result_label.Name = "result_label";
+            this.result_label.Size = new System.Drawing.Size(73, 19);
+            this.result_label.TabIndex = 9;
+            this.result_label.Text = "Результат:";
             // 
-            // Result_v
+            // result_textbox
             // 
-            this.Result_v.Location = new System.Drawing.Point(93, 124);
-            this.Result_v.Name = "Result_v";
-            this.Result_v.ReadOnly = true;
-            this.Result_v.Size = new System.Drawing.Size(120, 23);
-            this.Result_v.TabIndex = 10;
+            this.result_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.result_textbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.result_textbox.Location = new System.Drawing.Point(212, 82);
+            this.result_textbox.Name = "result_textbox";
+            this.result_textbox.ReadOnly = true;
+            this.result_textbox.Size = new System.Drawing.Size(194, 29);
+            this.result_textbox.TabIndex = 10;
+            // 
+            // exit_button
+            // 
+            this.exit_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exit_button.Location = new System.Drawing.Point(11, 291);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(394, 32);
+            this.exit_button.TabIndex = 15;
+            this.exit_button.Text = "Выйти в главное меню";
+            this.exit_button.UseVisualStyleBackColor = true;
             // 
             // LabTask8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 335);
-            this.Controls.Add(this.Result_v);
-            this.Controls.Add(this.Result_value);
-            this.Controls.Add(this.N_value);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.Calculate);
+            this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.result_textbox);
+            this.Controls.Add(this.result_label);
+            this.Controls.Add(this.value_label);
+            this.Controls.Add(this.value_numeric);
+            this.Controls.Add(this.calc_button);
             this.Controls.Add(this.task1_title_label);
             this.MaximumSize = new System.Drawing.Size(434, 374);
             this.MinimumSize = new System.Drawing.Size(434, 374);
             this.Name = "LabTask8";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Задание 8";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.value_numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +141,11 @@
         #endregion
 
         private Label task1_title_label;
-        private Button Calculate;
-        private NumericUpDown numericUpDown1;
-        private Label N_value;
-        private Label Result_value;
-        private TextBox Result_v;
+        private Button calc_button;
+        private NumericUpDown value_numeric;
+        private Label value_label;
+        private Label result_label;
+        private TextBox result_textbox;
+        private Button exit_button;
     }
 }

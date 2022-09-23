@@ -16,5 +16,6 @@ namespace CSharpLabs.Lab3.Windows
         {
             this.InitializeComponent();
         }
+
     }
 }

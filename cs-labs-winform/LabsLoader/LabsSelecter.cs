@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using CSharpLabs.Supports;
 using System.Reflection;
 
-namespace CSharpLabs.Loader
+namespace CSharpLabs.LabsLoader
 {
     public partial class LabsSelecter : Form
     {

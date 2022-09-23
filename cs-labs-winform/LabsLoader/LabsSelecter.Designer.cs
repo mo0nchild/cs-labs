@@ -1,4 +1,4 @@
-﻿namespace CSharpLabs.Loader
+﻿namespace CSharpLabs.LabsLoader
 {
     partial class LabsSelecter
     {

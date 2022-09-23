@@ -86,8 +86,10 @@
             this.task_combobox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.task_combobox.FormattingEnabled = true;
             this.task_combobox.Items.AddRange(new object[] {
-            "Задание 1",
-            "Задание 2"});
+            "Задание 5",
+            "Задание 6",
+            "Задание 7",
+            "Задание 8"});
             this.task_combobox.Location = new System.Drawing.Point(14, 133);
             this.task_combobox.Name = "task_combobox";
             this.task_combobox.Size = new System.Drawing.Size(149, 29);
