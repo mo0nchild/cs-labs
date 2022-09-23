@@ -61,9 +61,19 @@
             0,
             65536});
             this.value_e_numeric.Location = new System.Drawing.Point(12, 88);
+            this.value_e_numeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.value_e_numeric.Name = "value_e_numeric";
             this.value_e_numeric.Size = new System.Drawing.Size(161, 29);
             this.value_e_numeric.TabIndex = 3;
+            this.value_e_numeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             // 
             // value_e_label
             // 
@@ -94,6 +104,7 @@
             this.calc_button.TabIndex = 6;
             this.calc_button.Text = "Вычислить результат ряда";
             this.calc_button.UseVisualStyleBackColor = true;
+            this.calc_button.Click += new System.EventHandler(this.calc_button_Click);
             // 
             // label1
             // 

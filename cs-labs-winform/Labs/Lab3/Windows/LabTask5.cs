@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpLabs.Labs.Lab3.Logics;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CSharpLabs.Lab3.Logics;
+
 namespace CSharpLabs.Lab3.Windows
 {
     public partial class LabTask5 : Form
@@ -15,6 +18,13 @@ namespace CSharpLabs.Lab3.Windows
         public LabTask5()
         {
             this.InitializeComponent();
+        }
+
+        private void calc_button_Click(object sender, EventArgs e)
+        {
+            var Task = new Task5Logic();
+
+            result_textbox.Text = (Task.calculate_row((float)value_e_numeric.Value)).ToString();
         }
     }
 }
