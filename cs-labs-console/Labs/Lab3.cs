@@ -66,7 +66,6 @@ namespace CSharpLabs.Labs
         private static void Task3()
         {
             Console.Clear();
-            var output = new List<int>();
 
             for (int i = 1000; i <= 9999; i++)
             {
