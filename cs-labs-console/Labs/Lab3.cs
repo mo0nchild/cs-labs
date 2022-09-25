@@ -11,7 +11,7 @@ namespace CSharpLabs.Labs
     internal class Lab3 : ILabRunner
     {
         public string LabName => "ConsoleLab3";
-        public void RunLab() => Task1();
+        public void RunLab() => Lab3.Task1();
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
         private static void Task1()
         {
@@ -61,12 +61,14 @@ namespace CSharpLabs.Labs
             if (count == 0) Console.WriteLine("Среди заданных чисел нет трёхзначных");   
             else Console.WriteLine($"Количество чисел удовлетворяющих условие: {count}");
         }
+
+        // -------------------------------------------------| Задание 3 |------------------------------------------------------
         private static void Task3()
         {
             Console.Clear();
             var output = new List<int>();
 
-            for (int i = 1000; i < 9999; i++)
+            for (int i = 1000; i <= 9999; i++)
             {
                 if (i % 133 == 125 && i % 134 == 111)
                 {
@@ -75,6 +77,7 @@ namespace CSharpLabs.Labs
             }
         }
 
+        // -------------------------------------------------| Задание 4 |------------------------------------------------------
         private static void Task4()
         {
             Console.WriteLine("Введите последовательность чисел:");
