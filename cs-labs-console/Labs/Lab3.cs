@@ -79,7 +79,9 @@ namespace CSharpLabs.Labs
         // -------------------------------------------------| Задание 4 |------------------------------------------------------
         private static void Task4()
         {
+            Console.Clear();
             Console.WriteLine("Введите последовательность чисел:");
+            
             string[]? input_strings = Console.ReadLine()?.Split(" 0")[0].Split(' ');
             if (input_strings is null) return;
 

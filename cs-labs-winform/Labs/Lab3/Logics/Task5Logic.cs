@@ -16,9 +16,7 @@ namespace CSharpLabs.Labs.Lab3.Logics
             for (int i = 1; true; i++)
             {
                 double current_row = 1.0 / Math.Sqrt(Factorial(i));
-
                 if (current_row < EPS) return result;
-
                 result += current_row;
             }
                

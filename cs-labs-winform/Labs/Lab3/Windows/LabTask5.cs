@@ -18,14 +18,15 @@ namespace CSharpLabs.Lab3.Windows
         public LabTask5()
         {
             this.InitializeComponent();
+
             this.exit_button.Click += new EventHandler(ExitButton_Click);
+            this.calc_button.Click += new EventHandler(calc_button_Click);
         }
 
         private void ExitButton_Click(object? sender, EventArgs e) => this.Close();
-        private void calc_button_Click(object sender, EventArgs e)
+        private void calc_button_Click(object? sender, EventArgs e)
         {
             var Task = new Task5Logic();
-
             result_textbox.Text = (Task.calculate_row((float)value_e_numeric.Value)).ToString();
         }
     }

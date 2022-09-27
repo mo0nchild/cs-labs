@@ -24,19 +24,16 @@ namespace CSharpLabs.Lab3.Logics
             while (buffer > 0)
             {
                 var current_digit = buffer / 10 % 10;
-
                 if (current_digit != 5 && current_digit != 0) 
                 {
                     result += (current_digit * (int)Math.Pow(10, digit_index));
                     digit_index++;
                 }
-
                 buffer /= 10;
             }
 
             if (lastdigit_value != 5 && lastdigit_value != 0) result += (lastdigit_value);
             else { result /= 10; }
-
             return result;
         }
 
@@ -53,7 +50,6 @@ namespace CSharpLabs.Lab3.Logics
                     result += (int)(digit_value * Math.Pow(10, digit_index++));
                 }
             }
-
             return result;
         }
     }
