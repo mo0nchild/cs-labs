@@ -8,9 +8,10 @@ using CSharpLabs.Supports;
 
 namespace CSharpLabs.Labs
 {
+    [type: LabDetectAttribute("ConsoleLab3", 3)]
     internal class Lab3 : ILabRunner
     {
-        public string LabName => "ConsoleLab3";
+        //public string LabName => "ConsoleLab3";
         public void RunLab() => Lab3.Task1();
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
         private static void Task1()

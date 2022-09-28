@@ -10,37 +10,42 @@ using System.Threading.Tasks;
 
 namespace CSharpLabs.Supports
 {
+    [System.AttributeUsage(AttributeTargets.Class)]
+    public class LabDetectAttribute : System.Attribute 
+    {
+        public string LabName { get; set; }
+        public int LabNumber { get; set; }
+        public LabDetectAttribute(string lab_name, int lab_number) => (this.LabName, this.LabNumber) = (lab_name, lab_number);
+    }
+
     public class LabComparer : IComparer<System.Type>
     {
         public int Compare(Type? x, Type? y)
         {
             if (x is null || y is null) throw new Exception("Недопустимое значение аргументов");
-            var x_instance = ((ILabRunner)Activator.CreateInstance(x)!);
-            var y_instance = ((ILabRunner)Activator.CreateInstance(y)!);
+            var x_attribute = x.GetCustomAttribute<LabDetectAttribute>()!;
+            var y_attribute = y.GetCustomAttribute<LabDetectAttribute>()!;
 
-            return string.Compare(x_instance.LabName, y_instance.LabName);
+            return string.Compare(x_attribute.LabName, y_attribute.LabName);
         }
     }
-    public interface ILabRunner 
-    { 
-        public string LabName { get; }
-        public void RunLab(); 
-    }
+    public interface ILabRunner { void RunLab(); }
     public class LoaderSupport : System.Object, IEnumerable<(System.Type Type, string Name)>
     {
         private SortedSet<System.Type> TypesList { get; set; } = new(new LabComparer());
         public int TypesListCount { get => this.TypesList.Count; }
         public (System.Type Type, string Name) this[int key]
         {
-            get => (this.TypesList.ElementAt(key), 
-                (Activator.CreateInstance(this.TypesList.ElementAt(key)) as ILabRunner)!.LabName);
+            get => (this.TypesList.ElementAt(key),
+                this.TypesList.ElementAt<Type>(key).GetCustomAttribute<LabDetectAttribute>()!.LabName);
         }
         public LoaderSupport() : this(Assembly.GetExecutingAssembly()) { }
         public LoaderSupport(Assembly assembly) 
         {
             foreach (System.Type labtype in assembly.GetTypes())
             {
-                if (labtype.GetInterface("ILabRunner", true) != null) this.TypesList.Add(labtype);
+                if (labtype.GetCustomAttribute(typeof(LabDetectAttribute)) != null
+                    && labtype.GetInterface("ILabRunner", true) != null) this.TypesList.Add(labtype);
             }
         }
         public void InvokeTask(int task_index = 0) 
@@ -57,7 +62,7 @@ namespace CSharpLabs.Supports
         {
             foreach (System.Type labtype in this.TypesList)
             {
-                yield return (labtype, ((ILabRunner)Activator.CreateInstance(labtype)!).LabName);
+                yield return (labtype, labtype.GetCustomAttribute<LabDetectAttribute>()!.LabName);
             }
         }
         IEnumerator IEnumerable.GetEnumerator() => (IEnumerator)this.GetEnumerator();
