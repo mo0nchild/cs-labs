@@ -10,11 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CSharpLabs.Lab3.Logics;
+using CSharpLabs.LabsLoader;
 
 namespace CSharpLabs.Lab3.Windows
 {
-    public partial class LabTask5 : Form
+    [type: TaskDetectAttribute("Задание 5", "WinformLab3")]
+    public partial class LabTask5 : Form, ITaskLaunchable
     {
+        public string TaskInfo => "Найти сумму бесконечного ряда. Суммировать пока члены ряда не станут меньше заданного eps > 0.";
+
         public LabTask5()
         {
             this.InitializeComponent();
@@ -29,5 +33,8 @@ namespace CSharpLabs.Lab3.Windows
             var Task = new Task5Logic();
             result_textbox.Text = (Task.calculate_row((float)value_e_numeric.Value)).ToString();
         }
+
+        public void TaskLaunch() => this.ShowDialog();
+
     }
 }

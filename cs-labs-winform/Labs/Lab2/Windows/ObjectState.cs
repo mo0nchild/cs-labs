@@ -46,7 +46,7 @@ namespace CSharpLabs.Lab2.Windows
                     this.pictureBox1.Image = Image.FromFile(assetsfolder_path + "\\sports.jpg");
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     break;
-                case MotoType.Tourer:
+                case MotoType.Adventure:
                     this.pictureBox1.Image = Image.FromFile(assetsfolder_path + "\\adventure.jpg");
                     this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     break;

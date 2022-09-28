@@ -1,4 +1,4 @@
-﻿namespace CSharpLabs.Lab2.Windows
+﻿namespace CSharpLabs.LabsLoader
 {
     partial class MainMenu
     {
@@ -41,12 +41,12 @@
             // main_label
             // 
             this.main_label.AutoSize = true;
-            this.main_label.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.main_label.Location = new System.Drawing.Point(103, 9);
+            this.main_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.main_label.Location = new System.Drawing.Point(76, 14);
             this.main_label.Name = "main_label";
-            this.main_label.Size = new System.Drawing.Size(241, 25);
+            this.main_label.Size = new System.Drawing.Size(303, 32);
             this.main_label.TabIndex = 1;
-            this.main_label.Text = "Лабораторная работа №2";
+            this.main_label.Text = "Лабораторная работа №#";
             this.main_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // info_button
@@ -58,7 +58,6 @@
             this.info_button.TabIndex = 2;
             this.info_button.Text = "Информация лабораторной работы ";
             this.info_button.UseVisualStyleBackColor = true;
-            this.info_button.Click += new System.EventHandler(this.InfoButton_Click);
             // 
             // help_button
             // 
@@ -69,7 +68,6 @@
             this.help_button.TabIndex = 3;
             this.help_button.Text = "Описание";
             this.help_button.UseVisualStyleBackColor = true;
-            this.help_button.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // start_button
             // 
@@ -80,7 +78,6 @@
             this.start_button.TabIndex = 4;
             this.start_button.Text = "Запуск задания";
             this.start_button.UseVisualStyleBackColor = true;
-            this.start_button.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // task_combobox
             // 
@@ -88,9 +85,6 @@
             this.task_combobox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.task_combobox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.task_combobox.FormattingEnabled = true;
-            this.task_combobox.Items.AddRange(new object[] {
-            "Задание 1",
-            "Задание 2"});
             this.task_combobox.Location = new System.Drawing.Point(14, 133);
             this.task_combobox.Name = "task_combobox";
             this.task_combobox.Size = new System.Drawing.Size(149, 29);
@@ -103,12 +97,12 @@
             this.theme_label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.theme_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.theme_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.theme_label.Location = new System.Drawing.Point(12, 43);
+            this.theme_label.Location = new System.Drawing.Point(14, 57);
             this.theme_label.Name = "theme_label";
-            this.theme_label.Size = new System.Drawing.Size(431, 59);
+            this.theme_label.Size = new System.Drawing.Size(424, 40);
             this.theme_label.TabIndex = 0;
-            this.theme_label.Text = "«Разработка визуальных пользовательских интерфейсов для \r\nпрограммирования ввода-" +
-    "вывода и основных операторов языка \r\nC# на платформе .NET Framework»";
+            this.theme_label.Text = "        «По дисциплине: Программирование на платформе            \r\n .NET Framewor" +
+    "k»";
             this.theme_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // task_label
@@ -132,7 +126,6 @@
             this.exit_button.TabIndex = 7;
             this.exit_button.Text = "Выход";
             this.exit_button.UseVisualStyleBackColor = true;
-            this.exit_button.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // MainMenu
             // 

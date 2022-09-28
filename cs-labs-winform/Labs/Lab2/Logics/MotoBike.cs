@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CSharpLabs.Lab2.Logics
 {
     // перечисление используемое для определения типа мотоцикла (скутер, классический, спортивный, туристический)
-    public enum MotoType { Scooter = 1, Classic, Sports, Tourer }
+    public enum MotoType { Scooter = 1, Classic, Sports, Adventure }
     public struct MotoBike
     {
         // неизменяемое поле, которое определяет стандартное значение скорости мотоцикла

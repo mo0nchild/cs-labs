@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CSharpLabs.Lab3.Logics;
+using CSharpLabs.LabsLoader;
 
 namespace CSharpLabs.Lab3.Windows
 {
-    public partial class LabTask7 : Form
+    [type: TaskDetectAttribute("Задание 7", "WinformLab3")]
+    public partial class LabTask7 : Form, ITaskLaunchable
     {
+        public string TaskInfo => "Дано целое число N, выбросить из его записи цифры 0 и 5, сохранив прежний порядок остальных цифр.";
+
         public LabTask7()
         {
             this.InitializeComponent();
@@ -39,5 +43,8 @@ namespace CSharpLabs.Lab3.Windows
         }
 
         private void ExitButton_Click(object? sender, EventArgs e) => this.Close();
+
+        public void TaskLaunch() => this.ShowDialog();
+
     }
 }

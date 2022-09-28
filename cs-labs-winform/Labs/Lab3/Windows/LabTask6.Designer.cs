@@ -41,8 +41,11 @@
             this.result_label = new System.Windows.Forms.Label();
             this.calc_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
+            this.step_label = new System.Windows.Forms.Label();
+            this.step_numeric = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.leftside_numeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightside_numeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.step_numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // title_label
@@ -65,10 +68,10 @@
             this.func_columnheader});
             this.result_listview.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.result_listview.FullRowSelect = true;
-            this.result_listview.Location = new System.Drawing.Point(12, 86);
+            this.result_listview.Location = new System.Drawing.Point(12, 69);
             this.result_listview.MultiSelect = false;
             this.result_listview.Name = "result_listview";
-            this.result_listview.Size = new System.Drawing.Size(222, 137);
+            this.result_listview.Size = new System.Drawing.Size(222, 125);
             this.result_listview.TabIndex = 4;
             this.result_listview.UseCompatibleStateImageBehavior = false;
             this.result_listview.View = System.Windows.Forms.View.Details;
@@ -87,7 +90,7 @@
             // 
             this.leftside_numeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.leftside_numeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.leftside_numeric.Location = new System.Drawing.Point(245, 86);
+            this.leftside_numeric.Location = new System.Drawing.Point(245, 69);
             this.leftside_numeric.Minimum = new decimal(new int[] {
             100,
             0,
@@ -101,7 +104,7 @@
             // 
             this.rightside_numeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rightside_numeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rightside_numeric.Location = new System.Drawing.Point(245, 140);
+            this.rightside_numeric.Location = new System.Drawing.Point(245, 123);
             this.rightside_numeric.Minimum = new decimal(new int[] {
             100,
             0,
@@ -115,7 +118,7 @@
             // 
             this.listview_label.AutoSize = true;
             this.listview_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listview_label.Location = new System.Drawing.Point(12, 64);
+            this.listview_label.Location = new System.Drawing.Point(12, 47);
             this.listview_label.Name = "listview_label";
             this.listview_label.Size = new System.Drawing.Size(191, 19);
             this.listview_label.TabIndex = 7;
@@ -125,7 +128,7 @@
             // 
             this.leftside_label.AutoSize = true;
             this.leftside_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.leftside_label.Location = new System.Drawing.Point(245, 64);
+            this.leftside_label.Location = new System.Drawing.Point(245, 47);
             this.leftside_label.Name = "leftside_label";
             this.leftside_label.Size = new System.Drawing.Size(104, 19);
             this.leftside_label.TabIndex = 8;
@@ -135,7 +138,7 @@
             // 
             this.rightside_label.AutoSize = true;
             this.rightside_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rightside_label.Location = new System.Drawing.Point(245, 118);
+            this.rightside_label.Location = new System.Drawing.Point(245, 101);
             this.rightside_label.Name = "rightside_label";
             this.rightside_label.Size = new System.Drawing.Size(113, 19);
             this.rightside_label.TabIndex = 9;
@@ -145,17 +148,17 @@
             // 
             this.result_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.result_textbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.result_textbox.Location = new System.Drawing.Point(245, 194);
+            this.result_textbox.Location = new System.Drawing.Point(12, 219);
             this.result_textbox.Name = "result_textbox";
             this.result_textbox.ReadOnly = true;
-            this.result_textbox.Size = new System.Drawing.Size(161, 29);
+            this.result_textbox.Size = new System.Drawing.Size(394, 29);
             this.result_textbox.TabIndex = 10;
             // 
             // result_label
             // 
             this.result_label.AutoSize = true;
             this.result_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.result_label.Location = new System.Drawing.Point(245, 172);
+            this.result_label.Location = new System.Drawing.Point(12, 197);
             this.result_label.Name = "result_label";
             this.result_label.Size = new System.Drawing.Size(132, 19);
             this.result_label.TabIndex = 11;
@@ -164,7 +167,7 @@
             // calc_button
             // 
             this.calc_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.calc_button.Location = new System.Drawing.Point(12, 233);
+            this.calc_button.Location = new System.Drawing.Point(12, 254);
             this.calc_button.Name = "calc_button";
             this.calc_button.Size = new System.Drawing.Size(394, 32);
             this.calc_button.TabIndex = 12;
@@ -181,11 +184,48 @@
             this.exit_button.Text = "Выйти в главное меню";
             this.exit_button.UseVisualStyleBackColor = true;
             // 
+            // step_label
+            // 
+            this.step_label.AutoSize = true;
+            this.step_label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.step_label.Location = new System.Drawing.Point(245, 156);
+            this.step_label.Name = "step_label";
+            this.step_label.Size = new System.Drawing.Size(37, 19);
+            this.step_label.TabIndex = 15;
+            this.step_label.Text = "Шаг:";
+            // 
+            // step_numeric
+            // 
+            this.step_numeric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.step_numeric.DecimalPlaces = 2;
+            this.step_numeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.step_numeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.step_numeric.Location = new System.Drawing.Point(245, 178);
+            this.step_numeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.step_numeric.Name = "step_numeric";
+            this.step_numeric.Size = new System.Drawing.Size(161, 29);
+            this.step_numeric.TabIndex = 14;
+            this.step_numeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
             // LabTask6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 335);
+            this.Controls.Add(this.step_label);
+            this.Controls.Add(this.step_numeric);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.calc_button);
             this.Controls.Add(this.result_label);
@@ -204,6 +244,7 @@
             this.Text = "Задание 6";
             ((System.ComponentModel.ISupportInitialize)(this.leftside_numeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightside_numeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.step_numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +265,7 @@
         private ColumnHeader x_columnheader;
         private ColumnHeader func_columnheader;
         private Button exit_button;
+        private Label step_label;
+        private NumericUpDown step_numeric;
     }
 }

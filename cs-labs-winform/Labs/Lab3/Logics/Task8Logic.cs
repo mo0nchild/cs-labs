@@ -9,15 +9,15 @@ namespace CSharpLabs.Lab3.Logics
 {
     class Task8Logic
     {
-        public int Calculate_with_Fact(int n)
+        public int Calculate(int n)
         {
-            int result = Factorial(n);
-            int buffer = result;
+            int result = default;
+            int buffer = 1;
 
-            for (int i = n; i > 1; i--) 
+            for (int i = 1; i <= n; i++)
             {
-                result += buffer / i;
-                buffer /= i;
+                buffer *= i;
+                result += buffer;
             }
 
             return result;
