@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpLabs.LabsLoader;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,8 @@ using System.Windows.Forms;
 
 namespace CSharpLabs.Lab2.Windows
 {
-    public partial class LabTask1 : Form
+    [type: TaskDetectAttribute("Задание 1", "WinformLab2")]
+    public partial class LabTask1 : Form, ITaskLaunchable
     {
         public LabTask1() 
         {
@@ -24,6 +26,11 @@ namespace CSharpLabs.Lab2.Windows
 
             this.back_button.Click += new System.EventHandler(this.BackButtonClick);
         }
+
+        public string TaskInfo => "1) Вычислить выражение\n2) Вычислить время падения тела.\n" +
+            "3) Имеет ли квадратное уравнение решение.\n4) Вычисление площадей фигур";
+
+        public void TaskLaunch() => this.ShowDialog();
 
         private void BackButtonClick(object? sender, EventArgs e) => this.Close();
 

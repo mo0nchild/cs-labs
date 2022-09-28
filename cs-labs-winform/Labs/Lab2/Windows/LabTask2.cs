@@ -9,12 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CSharpLabs.Lab2.Logics;
+using CSharpLabs.LabsLoader;
 
 namespace CSharpLabs.Lab2.Windows
 {
-    public partial class LabTask2 : Form
+    [type: TaskDetectAttribute("Задание 2", "WinformLab2")]
+    public partial class LabTask2 : Form, ITaskLaunchable
     {
         private MotoBike moto_bike = default;
+
+        public string TaskInfo => "Создать структуру по предметной области и метод отображения данных";
 
         public LabTask2()
         {
@@ -51,5 +55,7 @@ namespace CSharpLabs.Lab2.Windows
         private void BackButtonClick(object? sender, EventArgs e) => this.Close();
         
         private void Create_MotoBike_Standart() => this.moto_bike = new MotoBike();
+
+        public void TaskLaunch() => this.ShowDialog();
     }
 }
