@@ -11,25 +11,26 @@ namespace CSharpLabs.Labs
     [type: LabDetectAttribute("ConsoleLab3", 3)]
     internal class Lab3 : ILabRunner
     {
+
         //public string LabName => "ConsoleLab3";
         public void RunLab() => Lab3.Task1();
         // -------------------------------------------------| Задание 1 |------------------------------------------------------
         private static void Task1()
         {
-            int ask = default(int);
+            var ask = default(int);
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Введите номер задания\n2) Задание 2\n3) Задание 3\n4) Задание 4\n5) Выход");
+                Console.WriteLine("Введите номер задания:\n2) - Задание 2\n3) - Задание 3\n4) - Задание 4\n5) - Завершение работы");
                 
                 try { ask = Convert.ToInt32(Console.ReadLine()); }
                 catch { continue; }
 
                 switch (ask)
                 {
-                    case 2: Task2(); break;
-                    case 3: Task3(); break;
-                    case 4: Task4(); break;
+                    case 2: Lab3.Task2(); break;
+                    case 3: Lab3.Task3(); break;
+                    case 4: Lab3.Task4(); break;
                     default: return;
                 }
                 Console.WriteLine("Нажмите для продолжения");

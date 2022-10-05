@@ -184,11 +184,12 @@ namespace CSharpLabs.Labs
 
         public void RunLab()
         {
+            var input_value = default(int);
             while (true)
             {
+                Console.Clear(); // очистка буфера консоли
                 Console.WriteLine("Что необходимо выполнить?\n1) - Задание 1\n2) - Задание 2\n3) - Завершение программы\n");
-                int input_value = default;
-
+                
                 // обработка пользовательского ввода для установки значения операции
                 try { input_value = int.Parse(Console.ReadLine()!); }
                 catch (FormatException error) { Console.WriteLine(error.Message); return; }
@@ -203,7 +204,7 @@ namespace CSharpLabs.Labs
                 }
                 Console.WriteLine("Нажмите клавишу для продолжения");
                 Console.ReadKey(); // ожидание пользователя
-                Console.Clear(); // очистка буфера консоли
+                
             }
         }
     }
