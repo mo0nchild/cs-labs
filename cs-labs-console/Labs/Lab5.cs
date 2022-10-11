@@ -15,7 +15,7 @@ namespace CSharpLabs.Labs
         public class LabLogic: object
         {
             public delegate void MessageError(string msg);
-            public MessageError? message = default;
+            public MessageError? message = default(MessageError);
 
             public void RegisterDeligate(MessageError message) => this.message = message;
 
