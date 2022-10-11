@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace CSharpLabs.Labs
 {
     [type: LabDetectAttribute("ConsoleLab4", 4)]
-    internal class Lab4 : ILabRunner
+    public class Lab4 : ILabRunner
     {
         public void RunLab()
         {

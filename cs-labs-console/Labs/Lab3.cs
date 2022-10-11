@@ -9,7 +9,7 @@ using CSharpLabs.Supports;
 namespace CSharpLabs.Labs
 {
     [type: LabDetectAttribute("ConsoleLab3", 3)]
-    internal class Lab3 : ILabRunner
+    public class Lab3 : ILabRunner
     {
 
         //public string LabName => "ConsoleLab3";
