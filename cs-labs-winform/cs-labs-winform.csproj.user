@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
   <ItemGroup>
+    <Compile Update="LabsLoader\LabsSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LabsLoader\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Labs\Lab2\Windows\ChangeSpeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Labs\Lab2\Windows\LabTask1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Labs\Lab2\Windows\LabTask2.cs">
@@ -19,16 +26,13 @@
     <Compile Update="Labs\Lab2\Windows\ObjectState.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Labs\Lab2\Windows\LabTask1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Labs\Lab3\Windows\LabTask5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LabsLoader\LabsSelecter.cs">
+    <Compile Update="Labs\Lab4\Windows\LabTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Labs\Lab4\Windows\LabTask.cs">
+    <Compile Update="Labs\Lab5\Windows\LabTask1.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

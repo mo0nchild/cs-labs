@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpLabs.Labs.Lab3.Logics
+namespace CSharpLabs.Lab3.Logics
 {
     internal class Task5Logic
     {
