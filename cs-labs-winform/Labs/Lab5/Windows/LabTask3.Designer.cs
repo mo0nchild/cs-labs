@@ -139,7 +139,7 @@ namespace CSharpLabs.Lab5.Windows
             this.MaximumSize = new System.Drawing.Size(384, 307);
             this.MinimumSize = new System.Drawing.Size(384, 307);
             this.Name = "LabTask3";
-            this.Text = "Задание 1";
+            this.Text = "Задание 3";
             this.ResumeLayout(false);
             this.PerformLayout();
 
