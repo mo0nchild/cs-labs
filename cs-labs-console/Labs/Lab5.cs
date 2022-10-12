@@ -132,7 +132,7 @@ namespace CSharpLabs.Labs
             Console.WriteLine($"Результат: ");
             foreach (var str in list) 
             {
-                Console.WriteLine($"\t{list}");
+                Console.WriteLine($"\t{str}");
             }
 
         }
