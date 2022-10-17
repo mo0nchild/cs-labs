@@ -35,5 +35,8 @@
     <Compile Update="Labs\Lab5\Windows\LabTask1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Labs\Lab6\Windows\LabTask1.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
