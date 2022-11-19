@@ -31,7 +31,6 @@ namespace CSharpLabs.Labs
                 {
                     foreach (var num in numbers_str.Split(' ')) file.WriteLine(num);
                 }
-                
                 using (var file = File.OpenText($"{filename}.txt"))
                 {
                     while (!file.EndOfStream)
@@ -49,7 +48,6 @@ namespace CSharpLabs.Labs
                     SumModulus = Math.Round(Math.Abs(sum_result), 2), 
                     ProductSquare = Math.Round(product_result * product_result, 2) 
                 };
-
                 File.AppendAllLines($"{filename}.txt", new string[]
                 {
                     $"модуль суммы: {result.SumModulus}",
@@ -62,7 +60,6 @@ namespace CSharpLabs.Labs
             {
                 var fullname = $"{rootpath}\\{pathname}";
                 Directory.CreateDirectory(fullname);
-
                 return fullname;
             }
 
@@ -144,10 +141,7 @@ namespace CSharpLabs.Labs
             Console.Write("Название папки: ");
             var pathname = Console.ReadLine()!;
 
-            try
-            {
-                Console.WriteLine($"Создана папка: {this.LabLogicInstance.LabTask2(rootpath, pathname)}");
-            }
+            try { Console.WriteLine($"Создана папка: {this.LabLogicInstance.LabTask2(rootpath, pathname)}"); }
             catch { Console.WriteLine("Невозможно создать папку"); }
         }
 
@@ -178,11 +172,8 @@ namespace CSharpLabs.Labs
             Console.WriteLine("Введите название файла: ");
             var filename = Console.ReadLine()!;
 
-            try
-            {
-                Console.WriteLine($"Текст сообщения: {this.LabLogicInstance.LabTask4(filename)}");
-            }
-            catch { Console.WriteLine("Невозможно записать сообщение в файл"); }
+            try { Console.WriteLine($"Текст сообщения: {this.LabLogicInstance.LabTask4(filename)}"); }
+            catch { Console.WriteLine("Невозможно прочитать сообщение из файлв"); }
         }
     }
 }

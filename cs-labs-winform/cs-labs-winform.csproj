@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Labs\Lab9\Windows\LabTask2.resx~RF7917ef46.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Labs\Lab2\Assets\" />
     <Folder Include="Labs\Lab7\Windows\" />
   </ItemGroup>
@@ -53,6 +57,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Labs\Lab8\Windows\LabTask1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Labs\Lab9\Windows\LabTask2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Labs\Lab9\Windows\LabTask4.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
