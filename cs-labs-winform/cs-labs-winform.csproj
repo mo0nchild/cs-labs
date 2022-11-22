@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Labs\Lab10\Logics\Authorization.cs~RF898c5b28.TMP" />
     <None Remove="Labs\Lab9\Windows\LabTask2.resx~RF7917ef46.TMP" />
   </ItemGroup>
 
@@ -59,6 +60,12 @@
     <Compile Update="Labs\Lab8\Windows\LabTask1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Labs\Lab10\Windows\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Labs\Lab10\Windows\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Labs\Lab9\Windows\LabTask2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Labs\Lab10\Logics\ResourseFacoulty.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Labs\Lab10\Logics\ResoursePost.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
