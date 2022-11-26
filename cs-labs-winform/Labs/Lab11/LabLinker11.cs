@@ -6,9 +6,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpLabs.Lab10
+namespace CSharpLabs.Lab11
 {
-    [type: LabDetectAttribute("WinformLab10", 10)]
+    [type: LabDetectAttribute("WinformLab11", 11)]
     internal class LabLinker11 : object, ILabRunner
     {
         public void RunLab()

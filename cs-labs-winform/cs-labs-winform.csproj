@@ -24,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Labs\Lab11\Windows\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Labs\Lab3\Windows\LabTask6.cs">
       <SubType>Form</SubType>
     </Compile>

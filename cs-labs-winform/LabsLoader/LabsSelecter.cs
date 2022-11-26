@@ -16,7 +16,6 @@ namespace CSharpLabs.LabsLoader
     public partial class LabsSelecter : Form
     {
         private LoaderSupport labs_loader = new(Assembly.GetExecutingAssembly());
-        private int field;
 
         public LabsSelecter()
         {

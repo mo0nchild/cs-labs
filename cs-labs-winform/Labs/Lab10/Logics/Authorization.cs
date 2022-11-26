@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 #pragma warning disable SYSLIB0011 // Тип или член устарел
+
 namespace CSharpLabs.Lab10.Logics
 {
     public interface IProfileAuthorization<TProfileData>
@@ -39,13 +40,10 @@ namespace CSharpLabs.Lab10.Logics
                         profileModel = formatter?.Deserialize(fileStream)! as ProfileModel;
 
                         if (profileModel!.Login == login && profileModel.Password == password)
-                        {
-                            return profileModel.Key;
-                        }
+                        { return profileModel.Key; }
                     }
                 }
                 catch { continue; }
-                
             }
             return Guid.Empty;
         }
